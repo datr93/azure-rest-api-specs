@@ -52,6 +52,7 @@
           "vMSizeId": "Standard_D2s_v3",
           "diskType": "Standard_LRS",
           "vmCustomConfigurationUri": "https://storageaccountname.blob.core.windows.net/blobcontainer/file",
+          "vmCustomConfigurationParameterUri": "https://storageaccountname.blob.core.windows.net/blobcontainer/file",
           "imageInfo": {
             "type": "Gallery",
             "marketPlaceInfo": {

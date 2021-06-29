@@ -1996,7 +1996,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}/updateValidationOperationResults/default": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DesktopVirtualization/hostPools/{hostPoolName}/updateValidationOperationResults/{operationResultId}": {
       "get": {
         "tags": [
           "HostPoolUpdate"
@@ -2020,6 +2020,9 @@
           },
           {
             "$ref": "#/parameters/HostPoolNameParameter"
+          },
+          {
+            "$ref": "#/parameters/OperationResultIdParameter"
           }
         ],
         "responses": {
@@ -4265,7 +4268,11 @@
         },
         "vmCustomConfigurationUri": {
           "type": "string",
-          "description": "The uri to the storage blob containing scripts to be run on the virtual machine after provisioning."
+          "description": "The uri to the storage blob containing the arm template to be run on the virtual machine after provisioning."
+        },
+        "vmCustomConfigurationParameterUri": {
+          "type": "string",
+          "description": "The uri to the storage blob containing the parameter file to be run on the virtual machine after provisioning."
         },
         "imageInfo": {
           "$ref": "#/definitions/ImageInfoProperties",
@@ -6829,6 +6836,16 @@
       "description": "The name of the scaling plan.",
       "maxLength": 24,
       "minLength": 3,
+      "x-ms-parameter-location": "method"
+    },
+    "OperationResultIdParameter": {
+      "name": "operationResultId",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "description": "The Guid of the operation result.",
+      "maxLength": 36,
+      "minLength": 36,
       "x-ms-parameter-location": "method"
     }
   }
