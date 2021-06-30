@@ -1845,6 +1845,12 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "On static validation error.",
+            "schema": {
+              "$ref": "#/definitions/HostPoolUpdateValidationResponse"
+            }
+          },
           "202": {
             "description": "Successfully initiated hostpool update."
           },

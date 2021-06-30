@@ -26,6 +26,26 @@
     }
   },
   "responses": {
+    "200": {
+      "body": {
+        "warnings": [
+          {
+            "faultType": "ServiceError",
+            "faultCode": "code1",
+            "faultText": "text1",
+            "faultContext": "context1"
+          }
+        ],
+        "errors": [
+          {
+            "faultType": "ServiceError",
+            "faultCode": "code1",
+            "faultText": "text1",
+            "faultContext": "context1"
+          }
+        ]
+      }
+    },
     "202": {}
   }
 }
