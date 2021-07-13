@@ -12,8 +12,7 @@
         "maintenanceAlerts": [
           {
             "message": "hostpool under maintenance",
-            "duration": 10,
-            "beforeKickOff": false
+            "daysBeforeScheduledUpdate": 5
           }
         ],
         "logOffDelayMinutes": 10,
