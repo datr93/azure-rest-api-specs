@@ -6,7 +6,7 @@
     "api-version": "2021-05-13-preview",
     "sessionHostConfiguration": {
       "properties": {
-        "vMSizeId": "Standard_D2s_v3",
+        "vmSizeId": "Standard_D2s_v3",
         "diskType": "Standard_LRS",
         "vmCustomConfigurationUri": "https://storageaccountname.blob.core.windows.net/blobcontainer/file",
         "vmCustomConfigurationParameterUri": "https://storageaccountname.blob.core.windows.net/blobcontainer/file",
@@ -57,7 +57,7 @@
         },
         "properties": {
           "version": "2008-09-22T14:01:54.9571247Z",
-          "vMSizeId": "Standard_D2s_v3",
+          "vmSizeId": "Standard_D2s_v3",
           "diskType": "Standard_LRS",
           "vmCustomConfigurationUri": "https://storageaccountname.blob.core.windows.net/blobcontainer/file",
           "vmCustomConfigurationParameterUri": "https://storageaccountname.blob.core.windows.net/blobcontainer/file",
@@ -107,7 +107,7 @@
         },
         "properties": {
           "version": "2008-09-22T14:01:54.9571247Z",
-          "vMSizeId": "Standard_D2s_v3",
+          "vmSizeId": "Standard_D2s_v3",
           "diskType": "Standard_LRS",
           "vmCustomConfigurationUri": "https://storageaccountname.blob.core.windows.net/blobcontainer/file",
           "vmCustomConfigurationParameterUri": "https://storageaccountname.blob.core.windows.net/blobcontainer/file",

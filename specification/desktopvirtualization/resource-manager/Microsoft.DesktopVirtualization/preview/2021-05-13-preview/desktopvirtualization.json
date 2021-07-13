@@ -1846,7 +1846,7 @@
         ],
         "responses": {
           "200": {
-            "description": "On static validation error.",
+            "description": "On static validation errors for validateOnly.",
             "schema": {
               "$ref": "#/definitions/HostPoolUpdateValidationResponse"
             }
@@ -2047,10 +2047,6 @@
               "$ref": "#/definitions/CloudError"
             }
           }
-        },
-        "x-ms-long-running-operation": true,
-        "x-ms-long-running-operation-options": {
-          "final-state-via": "location"
         }
       }
     },
@@ -2096,10 +2092,6 @@
               "$ref": "#/definitions/CloudError"
             }
           }
-        },
-        "x-ms-long-running-operation": true,
-        "x-ms-long-running-operation-options": {
-          "final-state-via": "location"
         }
       }
     },
@@ -4236,7 +4228,7 @@
           "description": "The time when session host configuration was last modified and something was changed.",
           "readOnly": true
         },
-        "vMSizeId": {
+        "vmSizeId": {
           "type": "string",
           "description": "The id of the size of a virtual machine connected to a hostpool."
         },
@@ -4465,7 +4457,7 @@
             "$ref": "#/definitions/MaintenanceAlertsProperties"
           }
         },
-        "logOffDelaySeconds": {
+        "logOffDelayMinutes": {
           "type": "integer",
           "format": "int32",
           "description": "Grace period before logging off users in seconds."
@@ -4795,7 +4787,25 @@
       "properties": {
         "faultType": {
           "type": "string",
-          "description": "Hostpool update fault type. Either ServiceError or UserError."
+          "description": "Hostpool update fault type.",
+          "enum": [
+            "ServiceError",
+            "UserError"
+          ],
+          "x-ms-enum": {
+            "name": "faultType",
+            "modelAsString": true,
+            "values": [
+              {
+                "value": "ServiceError",
+                "description": "Fault caused by service error."
+              },
+              {
+                "value": "UserError",
+                "description": "Fault caused by user error."
+              }
+            ]
+          }
         },
         "faultCode": {
           "type": "string",
