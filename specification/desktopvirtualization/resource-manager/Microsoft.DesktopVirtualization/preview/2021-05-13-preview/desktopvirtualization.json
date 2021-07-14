@@ -2324,7 +2324,7 @@
             "in": "query",
             "required": false,
             "type": "boolean",
-            "description": "Force flag to delete sessionHost."
+            "description": "Force flag to update assign unassign or reassign personal desktop."
           }
         ],
         "responses": {
