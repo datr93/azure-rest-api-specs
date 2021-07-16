@@ -2324,7 +2324,7 @@
             "in": "query",
             "required": false,
             "type": "boolean",
-            "description": "Force flag to update assign unassign or reassign personal desktop."
+            "description": "Force flag to update assign, unassign or reassign personal desktop."
           }
         ],
         "responses": {
@@ -4229,6 +4229,21 @@
       "description": "Session host configurations of HostPool.",
       "type": "object",
       "properties": {
+        "provisioningState": {
+          "description": "Provisioning state of the Session Host Configuration.",
+          "enum": [
+            "Succeeded",
+            "Failed",
+            "Canceled",
+            "InProgress"
+          ],
+          "type": "string",
+          "readOnly": true,
+          "x-ms-enum": {
+            "name": "ProvisioningState",
+            "modelAsString": false
+          }
+        },
         "version": {
           "type": "string",
           "format": "date-time",
@@ -4467,7 +4482,7 @@
         "logOffDelayMinutes": {
           "type": "integer",
           "format": "int32",
-          "description": "Grace period before logging off users in seconds."
+          "description": "Grace period before logging off users in minutes."
         },
         "logOffMessage": {
           "type": "string",
@@ -4481,13 +4496,13 @@
     },
     "MaintenanceAlertsProperties": {
       "type": "object",
-      "description": "Customer admins can opt to create additional alerts called maintenance alerts which will be sent out prior to the host pool update kick off. These alerts will enable the customer admin to inform their end users that their host pool update will be kicking off in between 1-5 days based on daysBeforeScheduledUpdate.",
+      "description": "Customer admins can opt to create additional alerts called maintenance alerts which will be sent out prior to the host pool update kick off. These alerts will enable the customer admins to inform their end users that their host pool update will be kicking off in between 1-5 days based on daysBeforeKickoff.",
       "properties": {
         "message": {
           "type": "string",
           "description": "The alert message."
         },
-        "daysBeforeScheduledUpdate": {
+        "daysBeforeKickoff": {
           "type": "integer",
           "format": "int32",
           "description": "The number of days before the scheduled update in which the maintenance alert will be sent."
